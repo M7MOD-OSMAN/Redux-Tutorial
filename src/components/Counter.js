@@ -1,22 +1,22 @@
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { decAction, incAction, incAction5 } from '../store/actions'
+import { decrement, increment, increment5 } from '../store/counterSlice'
 
 const Counter = () => {
-  const redCount = useSelector((state) => state.count)
+  const { count } = useSelector((state) => state.counter)
   const dispatch = useDispatch()
 
   const handleIncrease = () => {
-    incAction(dispatch)
+    dispatch(increment())
   }
   const handleDecrease = () => {
-    decAction(dispatch)
+    dispatch(decrement())
   }
   const handleincrease5 = () => {
-    incAction5(dispatch)
+    dispatch(increment5())
   }
   return (
     <div>
-      <h1>{redCount}</h1>
+      <h1>{count}</h1>
       <button onClick={handleIncrease}> Increase </button>
       <button onClick={handleDecrease}> Decrease </button>
       <button onClick={handleincrease5}> Increase by 5 </button>
