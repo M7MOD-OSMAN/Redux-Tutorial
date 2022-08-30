@@ -1,0 +1,21 @@
+aside {
+  background-color: aqua;
+  color: white;
+  width: 20%;
+  height: calc(100vh - 60px);
+  padding: 20px;
+}
+
+aside ul {
+  list-style: none;
+  height: 80vh;
+  background-color: rgb(85, 47, 133);
+}
+
+aside ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+}
